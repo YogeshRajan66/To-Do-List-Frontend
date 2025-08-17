@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    margin: 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: background 0.3s ease;
+}
+
+.row button:hover {
+    background: #e04a38;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px; /* Adjusted padding */
+    user-select: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between checkbox and text */
+}
+
+/* Style for the new checkbox */
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff5945; /* Colors the checkbox when ticked */
+    cursor: pointer;
+}
+
+/* When the parent li has the 'checked' class, style the text */
+ul li.checked .task-text {
+    color: #888;
+    text-decoration: line-through;
+}
+
+.task-text {
+    flex-grow: 1; /* Allows text to take up available space */
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #4195fc; /* Blue */
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red */
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    opacity: 0.8;
+}
